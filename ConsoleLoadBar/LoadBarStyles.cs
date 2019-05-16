@@ -3,34 +3,39 @@
 namespace ConsoleLoadBar
 {
     /// <summary>
-    /// Combinable styles to determine how the <see cref="LoadBar"/> is displayed
+    /// Combinable styles to determine how the <see cref="LoadBar"/> is displayed.
     /// </summary>
     [Flags]
     public enum LoadBarStyles
     {
         /// <summary>
-        /// No visible load bar
+        /// No visible load bar.
         /// </summary>
         None = 0,
 
         /// <summary>
-        /// A traditional progress bar
+        /// A traditional progress bar.
         /// </summary>
         Bar = 1,
 
         /// <summary>
-        /// Progress percentage
+        /// (<see cref="LoadBar.CurrentValue"/> / <see cref="LoadBar.FinishValue"/>)
         /// </summary>
-        Percentage = 2,
+        CurrentOfFinish = 2,
 
         /// <summary>
-        /// Continuous progress spinner
+        /// Progress percentage.
         /// </summary>
-        Spinner = 4,
+        Percentage = 4,
 
         /// <summary>
-        /// All styles applied
+        /// Continuous progress spinner.
         /// </summary>
-        All = 7
+        Spinner = 8,
+
+        /// <summary>
+        /// All styles applied.
+        /// </summary>
+        All = int.MaxValue
     }
 }
